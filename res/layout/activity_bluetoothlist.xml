@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available Devices"
+        android:layout_margin="10dp"
+        android:id="@+id/textView2" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="10sp"
+            android:padding="2dp"
+            android:text="No."
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/num"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="10sp"
+            android:text="Name"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="10sp"
+            android:padding="5dp"
+            android:text="Time"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/type"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="10sp"
+            android:padding="5dp"
+            android:text="Address"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/address"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="10sp"
+            android:padding="5dp"
+            android:text="Signal Strength"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/rssi"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="278dp"
+        android:id="@+id/listView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/startscan_btn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Scan"
+        android:id="@+id/startscan_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/listView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Scan"
+        android:id="@+id/stopscan_btn"
+        android:layout_below="@+id/listView"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
